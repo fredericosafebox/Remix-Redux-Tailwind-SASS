@@ -1,11 +1,13 @@
-import { cssBundleHref } from '@remix-run/css-bundle';
 import type { LinksFunction } from '@remix-run/node';
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import { Provider } from 'react-redux';
 import { store } from './hooks/store';
+import tail from './styles/tailwind.css';
+import sass from '~/styles/index.css';
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
+  { rel: 'stylesheet', href: tail },
+  { rel: 'stylesheet', href: sass },
 ];
 
 export default function App() {
