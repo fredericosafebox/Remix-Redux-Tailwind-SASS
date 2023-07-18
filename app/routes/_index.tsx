@@ -9,5 +9,9 @@ export const links: LinksFunction = () => {
 };
 
 export default function Index() {
-  return <h1>Hello template</h1>;
+  return (
+    <main className="flex h-[100dvh] flex-col items-center justify-center bg-red-200">
+      <h1 className="rounded-[0.25rem] p-8 text-4xl shadow-[8px_8px_2px_1px_beige]">Hello</h1>
+    </main>
+  );
 }
